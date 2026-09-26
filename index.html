@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Convite de casamento de Letícia e Gustavo — 07 de novembro de 2026.">
+  <title>Letícia & Gustavo — 07.11.2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <style>
+    :root{--cream:#f7f1df;--paper:#fbf8ee;--olive:#3f4d18;--olive2:#59652b;--gold:#b49a55;--text:#354016}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--text);font-family:Montserrat,Arial,sans-serif}
+    a{color:inherit}
+    .hero{min-height:100svh;display:grid;place-items:center;padding:28px 18px;position:relative;overflow:hidden;background:
+      linear-gradient(rgba(24,27,18,.68),rgba(24,27,18,.76)),
+      url("assets/casal.jpg") center/cover}
+    .frame{width:min(980px,100%);min-height:calc(100svh - 56px);border:1px solid rgba(180,154,85,.75);display:flex;align-items:center;justify-content:center;padding:30px;position:relative}
+    .hero-inner{text-align:center;max-width:720px}
+    .eyebrow{letter-spacing:.25em;text-transform:uppercase;font-size:12px;margin-bottom:18px}
+    .names{font-family:Parisienne,cursive;font-size:clamp(72px,12vw,132px);font-weight:400;line-height:.82;margin:0;color:#d7dca5;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+    .and{font-family:Cormorant Garamond,serif;font-size:32px;margin:18px 0 12px;color:#f3eedc}
+    .date{font-family:Cormorant Garamond,serif;font-size:28px;letter-spacing:.12em}
+    .quote{font-family:Cormorant Garamond,serif;font-style:italic;font-size:21px;max-width:580px;margin:28px auto;color:#f1eddb;text-shadow:0 1px 10px rgba(0,0,0,.35)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border:1px solid var(--olive);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;font-size:11px;font-weight:600;transition:.2s;cursor:pointer;background:transparent;color:var(--olive)}
+    .btn:hover{background:var(--olive);color:white}
+    .hero .eyebrow,.hero .scroll{color:#eee8d4}.hero .btn{border-color:rgba(215,220,165,.7);color:#d7dca5}.hero .btn:hover{background:rgba(63,77,24,.85);color:#fff}.scroll{margin-top:28px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.7}
+    section{padding:88px 20px}
+    .section-inner{width:min(980px,100%);margin:auto}
+    .section-title{text-align:center;font-family:Cormorant Garamond,serif;font-size:44px;font-weight:500;margin:0 0 12px}
+    .section-sub{text-align:center;max-width:650px;margin:0 auto 42px;line-height:1.8;font-size:14px}
+    .divider{width:80px;height:1px;background:var(--gold);margin:20px auto 34px}
+    .story{background:var(--paper)}
+    .story-text{max-width:700px;margin:auto;text-align:center;font-family:Cormorant Garamond,serif;font-size:24px;line-height:1.65}
+    .countdown{background:var(--olive);color:#fff}
+    .countdown .section-title{color:#fff}
+    .timer{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:700px;margin:40px auto 0}
+    .time-box{border:1px solid rgba(255,255,255,.35);padding:24px 10px;text-align:center}
+    .num{font-family:Cormorant Garamond,serif;font-size:48px;line-height:1}
+    .label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-top:8px;opacity:.8}
+    .events{background:var(--cream)}
+    .cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .card{background:var(--paper);border:1px solid rgba(180,154,85,.5);padding:34px;text-align:center}
+    .icon{font-size:28px;margin-bottom:10px}
+    .card h3{font-family:Cormorant Garamond,serif;font-size:30px;font-weight:500;margin:8px 0}
+    .card p{line-height:1.8;font-size:13px;margin:5px 0}
+    .card .btn{margin-top:20px}
+    .rsvp{background:var(--paper)}
+    form{max-width:650px;margin:auto}
+    label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin:18px 0 7px}
+    input,select,textarea{width:100%;border:1px solid #c8bd9b;background:#fffdf7;padding:14px;font:inherit;color:var(--text);border-radius:0}
+    textarea{min-height:110px;resize:vertical}
+    .choice{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}
+    .choice button{min-height:52px;border:1px solid #bdb28e;background:transparent;color:var(--text);cursor:pointer;font:inherit}
+    .choice button.active{background:var(--olive);color:white;border-color:var(--olive)}
+    .hidden{display:none}
+    .notice{font-size:12px;line-height:1.6;opacity:.75;margin-top:14px}
+    .success{margin-top:20px;padding:18px;border:1px solid #b9ab7e;background:#f5f0df;display:none;line-height:1.7}
+    .footer{text-align:center;padding:55px 20px;background:var(--cream);border-top:1px solid rgba(180,154,85,.5)}
+    .footer .names-small{font-family:Parisienne,cursive;font-size:48px;color:var(--olive)}
+    @media(max-width:680px){
+      .frame{min-height:calc(100svh - 36px);padding:18px}
+      .names{font-size:74px}
+      .quote{font-size:19px}
+      section{padding:68px 16px}
+      .cards,.choice{grid-template-columns:1fr}
+      .timer{grid-template-columns:repeat(2,1fr)}
+      .num{font-size:40px}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="frame">
+      <div class="hero-inner">
+        <div class="eyebrow">Com a bênção de Deus</div>
+        <h1 class="names">Letícia</h1>
+        <div class="and">e</div>
+        <h1 class="names">Gustavo</h1>
+        <p class="quote">“Há caminhos que Deus nos convida a percorrer juntos.”</p>
+        <a class="btn" href="#detalhes">Abrir convite</a>
+        <div class="scroll">↓</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="story" id="historia">
+    <div class="section-inner">
+      <h2 class="section-title">Nossa história. 🤍</h2>
+      <div class="divider"></div>
+      <div class="story-text">
+        <p>Nossa história começou de um jeito que talvez nenhum de nós pudesse imaginar, mas que Deus já havia preparado.</p>
+        <p>Entre encontros, sorrisos, desafios e tantos momentos compartilhados, fomos construindo, dia após dia, um amor baseado em companheirismo, carinho e escolha.</p>
+        <p>Hoje, olhamos para tudo o que vivemos e percebemos que cada caminho percorrido nos trouxe até aqui: ao nosso grande dia.</p>
+        <p>Agora, diante de Deus e das pessoas que amamos, queremos celebrar o amor que nos uniu e o início de uma nova caminhada juntos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="countdown">
+    <div class="section-inner">
+      <h2 class="section-title">Nosso grande dia</h2>
+      <p class="section-sub">Estamos contando os dias para viver esse momento ao lado das pessoas que amamos.</p>
+      <div class="timer">
+        <div class="time-box"><div class="num" id="days">--</div><div class="label">Dias</div></div>
+        <div class="time-box"><div class="num" id="hours">--</div><div class="label">Horas</div></div>
+        <div class="time-box"><div class="num" id="minutes">--</div><div class="label">Minutos</div></div>
+        <div class="time-box"><div class="num" id="seconds">--</div><div class="label">Segundos</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="events" id="detalhes">
+    <div class="section-inner">
+      <h2 class="section-title">Detalhes do casamento</h2>
+      <div class="divider"></div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">♧</div>
+          <h3>Cerimônia</h3>
+          <p><strong>07 de novembro de 2026 · 10h40</strong></p>
+          <p>1º Registro Civil de Sorocaba<br>Rua Professor Toledo, 712<br>Centro — Sorocaba/SP</p>
+          <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=1%C2%BA+Registro+Civil+de+Sorocaba%2C+Rua+Professor+Toledo%2C+712%2C+Sorocaba%2C+SP">Como chegar</a>
+        </article>
+        <article class="card">
+          <div class="icon">♡</div>
+          <h3>Almoço</h3>
+          <p><strong>Após a cerimônia</strong></p>
+          <p>Rancho do Turquinho<br>Rod. João Leme dos Santos, km 116<br>Salto de Pirapora/SP</p>
+          <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Rancho+do+Turquinho%2C+Rod.+Jo%C3%A3o+Leme+dos+Santos%2C+km+116%2C+Salto+de+Pirapora%2C+SP">Como chegar</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="rsvp" id="rsvp">
+    <div class="section-inner">
+      <h2 class="section-title">Você vem celebrar com a gente?</h2>
+      <p class="section-sub">Confirme sua presença para nos ajudar na organização do nosso dia.</p>
+      <form id="rsvpForm">
+        <label for="name">Seu nome</label>
+        <input id="name" name="name" required placeholder="Digite seu nome">
+        <label>Presença</label>
+        <div class="choice">
+          <button type="button" data-choice="sim">Sim, estarei presente</button>
+          <button type="button" data-choice="nao">Não poderei comparecer</button>
+        </div>
+        <input type="hidden" id="attendance" value="">
+        <div id="guestsBox" class="hidden">
+          <label for="guests">Número de pessoas</label>
+          <select id="guests">
+            <option value="1">1 pessoa</option>
+            <option value="2">2 pessoas</option>
+            <option value="3">3 pessoas</option>
+            <option value="4">4 pessoas</option>
+            <option value="5">5 pessoas</option>
+          </select>
+        </div>
+        <label for="message">Mensagem (opcional)</label>
+        <textarea id="message" placeholder="Deixe uma mensagem para os noivos"></textarea>
+        <button class="btn" type="submit" style="margin-top:22px;width:100%">Confirmar presença</button>
+        <p class="notice">Nesta versão gratuita, a confirmação é preparada para envio pelo WhatsApp. No arquivo <strong>script.js</strong>, troque o número de exemplo pelo WhatsApp que receberá as confirmações.</p>
+        <div class="success" id="success"></div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="names-small">Letícia & Gustavo</div>
+    <p><strong>07 DE NOVEMBRO DE 2026 · 10H40</strong></p>
+    <p>Será uma alegria compartilhar esse momento com vocês.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
